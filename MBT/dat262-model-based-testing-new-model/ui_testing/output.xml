@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210416 18:40:08.259" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\schei\mbt_repo\dat262-model-based-testing\ui_testing\tests">
+<suite id="s1-s1" name="TS Marek" source="C:\Users\schei\mbt_repo\dat262-model-based-testing\ui_testing\tests\TS_Marek.robot">
+<test id="s1-s1-t1" name="Pre-conditions">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210416 18:40:08.420" endtime="20210416 18:40:08.420"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL_Amazon_Webpage}</arg>
+<arg>${BrowserChrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210416 18:40:08.421" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20210416 18:40:08.420" endtime="20210416 18:40:10.665"/>
+</kw>
+<status status="PASS" starttime="20210416 18:40:08.419" endtime="20210416 18:40:10.665"/>
+</test>
+<test id="s1-s1-t2" name="TC_Marek_001_Search for an item and put it in cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Input_Amazon_SearchTextBox_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:10.667" endtime="20210416 18:40:11.116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_Amazon_SearchTextBox_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:11.116" endtime="20210416 18:40:11.559"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Amazon_SearchTextBox_XPath}</arg>
+<arg>${Value_Amazon_Notebook}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210416 18:40:11.559" level="INFO">Typing text 'Notebook' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<status status="PASS" starttime="20210416 18:40:11.559" endtime="20210416 18:40:12.263"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Amazon_SearchTextBox_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210416 18:40:12.264" level="INFO">Clicking element '//input[@id='nav-search-submit-button']'.</msg>
+<status status="PASS" starttime="20210416 18:40:12.263" endtime="20210416 18:40:15.001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Value_Amazon_SearchResult_Notebook_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:15.001" endtime="20210416 18:40:15.450"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Value_Amazon_SearchResult_Notebook_XPath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210416 18:40:15.882" level="INFO">Element '//span[contains(text(),'"Notebook"')]' is displayed.</msg>
+<status status="PASS" starttime="20210416 18:40:15.450" endtime="20210416 18:40:15.882"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Value_Amazon_SearchResult_SpecificNotebookLink_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:15.883" endtime="20210416 18:40:16.311"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Value_Amazon_SearchResult_SpecificNotebookLink_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210416 18:40:16.312" level="INFO">Clicking element '//span[contains(text(),'Fast Dell Latitude E5470 HD Business Laptop Notebo')]'.</msg>
+<status status="PASS" starttime="20210416 18:40:16.311" endtime="20210416 18:40:19.388"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_Amazon_Product_AddToCart_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:19.388" endtime="20210416 18:40:19.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Amazon_Product_AddToCart_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210416 18:40:19.866" level="INFO">Clicking element '//input[@id='add-to-cart-button']'.</msg>
+<status status="PASS" starttime="20210416 18:40:19.866" endtime="20210416 18:40:20.474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Button_Amazon_Product_AddToCart_Popup_Cart_XPath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:20.474" endtime="20210416 18:40:23.028"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Amazon_Product_AddToCart_Popup_Cart_XPath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210416 18:40:23.028" level="INFO">Clicking element '//form[@id='attach-view-cart-button-form']'.</msg>
+<status status="PASS" starttime="20210416 18:40:23.028" endtime="20210416 18:40:25.047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Value_Amazon_Cart_Subtotal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210416 18:40:25.047" endtime="20210416 18:40:25.484"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Value_Amazon_Cart_Subtotal}</arg>
+<arg>Subtotal (1 item):</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210416 18:40:25.917" level="INFO">Element '//span[@id='sc-subtotal-label-activecart']' contains text 'Subtotal (1 item):'.</msg>
+<status status="PASS" starttime="20210416 18:40:25.484" endtime="20210416 18:40:25.917"/>
+</kw>
+<status status="PASS" starttime="20210416 18:40:10.666" endtime="20210416 18:40:25.918"/>
+</test>
+<test id="s1-s1-t3" name="Post-Conditions">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210416 18:40:25.920" endtime="20210416 18:40:28.195"/>
+</kw>
+<status status="PASS" starttime="20210416 18:40:25.919" endtime="20210416 18:40:28.196"/>
+</test>
+<doc>This test suite tests basic use cases</doc>
+<status status="PASS" starttime="20210416 18:40:08.280" endtime="20210416 18:40:28.200"/>
+</suite>
+<status status="PASS" starttime="20210416 18:40:08.261" endtime="20210416 18:40:28.202"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="TS Marek">Tests.TS Marek</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

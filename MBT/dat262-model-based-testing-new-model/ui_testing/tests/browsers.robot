@@ -1,0 +1,2 @@
+*** Variables ***
+${BrowserChrome}  Chrome
