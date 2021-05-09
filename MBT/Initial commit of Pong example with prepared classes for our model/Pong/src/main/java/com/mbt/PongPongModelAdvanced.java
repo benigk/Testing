@@ -117,7 +117,7 @@ public class PongPongModelAdvanced extends ExecutionContext implements ExampleLo
         pongAdapter.login();
     }
 
-/*    @Test
+    @Test
     public void functionalTest() {
         new TestBuilder()
             .setModel(MODEL_PATH)
@@ -125,7 +125,7 @@ public class PongPongModelAdvanced extends ExecutionContext implements ExampleLo
             .setPathGenerator(new RandomPath(new EdgeCoverage(100)))
             .setStart("e_Start")
             .execute();
-    }*/
+    }
 
     @Test
     public void functionalityTest() {

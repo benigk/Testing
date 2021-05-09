@@ -112,6 +112,7 @@ public class AdapterGroup3 {
 
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod(requestMethod);
+        //where do we get this "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", what is this used for
         con.setRequestProperty("X-Shopify-Access-Token", "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");
         con.setRequestProperty("Content-Type", "application/json; utf-8");
         con.setRequestProperty("Accept", "application/json");
